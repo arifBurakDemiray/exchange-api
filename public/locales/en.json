@@ -1,16 +1,16 @@
 {
 	"email": {
 		"reset_pwd": {
-			"title": "Hello SimpleTodo User!",
-			"subject": "SimpleTodo Reset Password Email",
-			"body": "Please follow that link to reset your SimpleTodo account's password",
+			"title": "Hello Super Traders User!",
+			"subject": "Super Traders Reset Password Email",
+			"body": "Please follow that link to reset your Super Traders account's password",
 			"button_name": "reset",
 			"warning": "You have 1 hour to reset your password.If you do not send this request ignore this emai"
 		},
 		"confirmation": {
-			"title": "Welcome SimpleTodo User!",
-			"subject": "SimpleTodo Account Confirmation Email",
-			"body": "Please confirm your account to use SimpleTodo",
+			"title": "Welcome Super Traders User!",
+			"subject": "Super Traders Account Confirmation Email",
+			"body": "Please confirm your account to use Super Traders",
 			"button_name": "confirm",
 			"warning": "You have 1 hour to confirm your account"
 		}
