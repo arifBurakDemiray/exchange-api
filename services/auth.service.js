@@ -33,9 +33,9 @@ export const authService = {
 
         const username = req.body.username
         const password = req.body.password
-        const granty_type = req.body.grant_type
+        const grant_type = req.body.grant_type
         const failResponse = Response().message(req.t('login_failed')).status(HttpStatus.BAD_REQUEST).build()
-        if(!granty_type || granty_type !== 'password' ){
+        if(!grant_type || grant_type !== 'password' ){
             return failResponse
         }
     
@@ -111,6 +111,7 @@ export const authService = {
         try {
         user = await orm.user.create({
             data: {
+                name: req.body.name,
                 email: username,
                 password: password
             }
