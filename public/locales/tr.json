@@ -1,0 +1,28 @@
+{
+    "email": {
+        "reset_pwd":{
+            "title":"Merhaba SimpleTodo Kullanicisi!",
+            "subject":"SimpleTodo Sifre Sifirlama Emaili",
+            "body":"Lutfen SimpleTodo hesabinizin sifresini sifirlamak icin linki takip ediniz",
+            "button_name":"sifirla",
+            "warning": "Sifrenizi sifirlamak icin 1 saatiniz var. Eger siz bir istekte bulunmadiysaniz bu maile aldiris etmeyiniz"
+        },
+        "confirmation":{
+            "title": "Hosgeldin SimpleTodo Kullanicisi!",
+            "subject": "SimpleTodo Hesabi Dogrulama Emaili",
+            "body": "SimpleTodo kullanabilmek icin lutfen hesabinizi onaylayiniz",
+            "button_name" : "onayla",
+            "warning": "You have 1 hour to confirm your account"
+        }
+    },
+    "todo": {
+		"not_permissible":"Bu koleksiyonu görebilmek için yeterli izinleriniz yok"
+	},
+    "login_failed": "Kullanici adi veya sifre yanlis",
+    "login_recently": "Yakin zamanda giris yaptiniz lutfen bekleyiniz",
+    "register_new": "Lutfen hesabinizi aktive ediniz",
+    "user_email_key": "Lutfen yeni bir hesap deneyiniz",
+    "email_sent_resp": "Eger emailiniz var ise mail gonderilecek",
+    "success": "Islem basarili",
+    "fail": "Islem basarisiz"
+}

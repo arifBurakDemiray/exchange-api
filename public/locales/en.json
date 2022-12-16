@@ -1,0 +1,28 @@
+{
+	"email": {
+		"reset_pwd": {
+			"title": "Hello SimpleTodo User!",
+			"subject": "SimpleTodo Reset Password Email",
+			"body": "Please follow that link to reset your SimpleTodo account's password",
+			"button_name": "reset",
+			"warning": "You have 1 hour to reset your password.If you do not send this request ignore this emai"
+		},
+		"confirmation": {
+			"title": "Welcome SimpleTodo User!",
+			"subject": "SimpleTodo Account Confirmation Email",
+			"body": "Please confirm your account to use SimpleTodo",
+			"button_name": "confirm",
+			"warning": "You have 1 hour to confirm your account"
+		}
+	},
+	"todo": {
+		"not_permissible":"You lack permissions to see this collection"
+	},
+	"login_failed": "Username or password is wrong",
+	"login_recently": "You logged in recently",
+	"register_new": "Please confirm your account",
+	"user_email_key": "Please provide different credentials",
+	"email_sent_resp": "If your email matches email will be sent",
+	"success": "Operation successful",
+	"fail": "Operation failed"
+}

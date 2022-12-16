@@ -1,0 +1,30 @@
+{
+  "name": "exchange-api",
+  "version": "0.0.0",
+  "private": true,
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ./bin/www.js"
+  },
+  "dependencies": {
+    "@prisma/client": "^4.6.1",
+    "bcrypt": "^5.1.0",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.0.3",
+    "express": "~4.16.1",
+    "fs": "^0.0.1-security",
+    "http-errors": "~1.6.3",
+    "i18next": "^22.0.6",
+    "i18next-fs-backend": "^2.0.1",
+    "i18next-http-middleware": "^3.2.1",
+    "jade": "~1.11.0",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "~1.9.1",
+    "nodemailer": "^6.8.0",
+    "nodemailer-express-handlebars": "^5.0.0",
+    "prisma": "^4.6.1",
+    "uuid": "^9.0.0"
+  }
+}
