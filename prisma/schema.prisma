@@ -20,7 +20,7 @@ model User {
   active         Boolean       @default(false)
   created_at     DateTime      @default(now())
   updated_at     DateTime      @updatedAt
-  money          Float         @unique @db.Double
+  money          Float         @default(0.0) @db.Double
   last_logged_in DateTime?
   UserCode       UserCode[]
   Transaction    Transaction[]
@@ -33,7 +33,6 @@ model User {
 
 model Portfolio {
   id         String   @id @default(uuid())
-  code       String
   created_at DateTime @default(now())
   user_id    String
   user       User     @relation(fields: [user_id], references: [id])
@@ -90,7 +89,7 @@ model Transaction {
   share_id   String
   share      Share        @relation(fields: [share_id], references: [id])
   rate       Int
-  cost       Float        @unique @db.Double
+  cost       Float        @db.Double
   created_at DateTime     @default(now())
   type       ETransaction
 
