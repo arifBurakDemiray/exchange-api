@@ -40,14 +40,15 @@ async function buy(req){
         return Response().message(req.t('transaction.create.not_enough_money')).status(HttpStatus.BAD_REQUEST).build()
     }
 
-    if(portfolio.share.rate < rate || asset.rate < portfolio.rate + rate ){
+    if(portfolio.share.rate < rate || (asset && (asset.rate > portfolio.rate + rate)) ){
         return Response().message(req.t('transaction.create.portfolio_denied')).status(HttpStatus.BAD_REQUEST).build()
     }
 
     const [_0,_1,_2,transaction] = await orm.$transaction([
-        orm.share.update({where: {id: req.body.share_id,closed: false},data: {rate: portfolio.share.rate - rate}}),
+        orm.share.update({where: {id: req.body.share_id},data: {rate: portfolio.share.rate - rate}}),
         orm.user.update({where: {id: userId},data: {money: portfolio.user.money - (rate * portfolio.share.price)}}),
-        orm.asset.update({where: {user_id: userId, share_id: req.body.share_id},data: {rate: rate + asset.rate}}),
+        asset ? orm.asset.update({where: {id: asset.id},data: {rate: rate + asset.rate}}) :
+        orm.asset.create({data: {user_id: userId,share_id: portfolio.share_id,rate: rate}}),
         orm.transaction.create({data: {user_id: userId, share_id: req.body.share_id,rate: rate, cost: rate * portfolio.share.price,type: ETransaction.BUY}})
     ])
 
@@ -76,9 +77,9 @@ async function sell(req){
     }
 
     const [_0,_1,_2,transaction] = await orm.$transaction([
-        orm.share.update({where: {id: req.body.share_id,closed: false},data: {rate: portfolio.share.rate + rate}}),
+        orm.share.update({where: {id: req.body.share_id},data: {rate: portfolio.share.rate + rate}}),
         orm.user.update({where: {id: userId},data: {money: portfolio.user.money + (rate * portfolio.share.price)}}),
-        orm.asset.update({where: {user_id: userId, share_id: req.body.share_id},data: {rate: asset.rate - rate}}),
+        orm.asset.update({where: {id: asset.id},data: {rate: asset.rate - rate}}),
         orm.transaction.create({data: {user_id: userId, share_id: req.body.share_id,rate: rate, cost: rate * portfolio.share.price,type: ETransaction.SELL}})
     ])
 
@@ -104,8 +105,18 @@ export const transactionService = {
             where : {
                 user_id: userId
             },
-            include: {
-                share: true
+            select: {
+                rate: true,
+                cost: true,
+                created_at: true,
+                id: true,
+                type: true,
+                share: {
+                    select: {
+                        symbol: true,
+                        id: true
+                    }
+                }
             }
         })
         
