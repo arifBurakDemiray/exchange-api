@@ -24,5 +24,14 @@
     "user_email_key": "Lutfen yeni bir hesap deneyiniz",
     "email_sent_resp": "Eger emailiniz var ise mail gonderilecek",
     "success": "Islem basarili",
-    "fail": "Islem basarisiz"
+    "fail": "Islem basarisiz",
+    "transaction":{
+        "portfolio_not": "Share portofolyonzuda yok",
+		"create":{
+			"portfolio_denied": "Yeterli orana sahip degilsiniz",
+            "invalid_type": "Gecersiz islem tipi",
+            "not_enough_money": "Yeterli paraniz yok",
+            "not_enough_rate": "Yeterli veriniz yok"
+		}
+	}
 }

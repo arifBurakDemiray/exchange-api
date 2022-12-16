@@ -24,5 +24,14 @@
 	"user_email_key": "Please provide different credentials",
 	"email_sent_resp": "If your email matches email will be sent",
 	"success": "Operation successful",
-	"fail": "Operation failed"
+	"fail": "Operation failed",
+	"transaction":{
+		"portfolio_not": "You do not have share in your portfolio",
+		"create":{
+			"portfolio_denied": "You do not have required rate",
+			"invalid_type": "Invalid transaction type",
+			"not_enough_money": "You do not have enough money",
+			"not_enough_rate": "You do not have enough rate to sell"
+		}
+	}
 }
