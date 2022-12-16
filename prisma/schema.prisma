@@ -20,11 +20,13 @@ model User {
   active         Boolean       @default(false)
   created_at     DateTime      @default(now())
   updated_at     DateTime      @updatedAt
+  money          Float         @unique @db.Double
   last_logged_in DateTime?
   UserCode       UserCode[]
   Transaction    Transaction[]
   Portfolio      Portfolio[]
   Asset          Asset[]
+  Share          Share[]
 
   @@map("user")
 }
@@ -59,6 +61,8 @@ model Share {
   price       Float         @unique @db.Double
   created_at  DateTime      @default(now())
   updated_at  DateTime      @updatedAt
+  user_id     String
+  user        User          @relation(fields: [user_id], references: [id])
   Transaction Transaction[]
   Portfolio   Portfolio[]
   Asset       Asset[]
