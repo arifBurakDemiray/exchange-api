@@ -61,6 +61,7 @@ model Share {
   price       Float         @unique @db.Double
   created_at  DateTime      @default(now())
   updated_at  DateTime      @updatedAt
+  closed      Boolean       @default(false)
   user_id     String
   user        User          @relation(fields: [user_id], references: [id])
   Transaction Transaction[]
@@ -71,15 +72,13 @@ model Share {
 }
 
 model Asset {
-  id         String       @id @default(uuid())
+  id         String   @id @default(uuid())
   user_id    String
-  user       User         @relation(fields: [user_id], references: [id])
+  user       User     @relation(fields: [user_id], references: [id])
   share_id   String
-  share      Share        @relation(fields: [share_id], references: [id])
+  share      Share    @relation(fields: [share_id], references: [id])
   rate       Int
-  cost       Float        @unique @db.Double
-  created_at DateTime     @default(now())
-  type       ETransaction
+  created_at DateTime @default(now())
 
   @@map("asset")
 }
