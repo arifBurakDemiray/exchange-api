@@ -33,5 +33,6 @@
             "not_enough_money": "Yeterli paraniz yok",
             "not_enough_rate": "Yeterli veriniz yok"
 		}
-	}
+	},
+	"share_symbol_key":"Benzersiz bir sembol tanimlayiniz"
 }

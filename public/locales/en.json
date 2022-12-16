@@ -33,5 +33,6 @@
 			"not_enough_money": "You do not have enough money",
 			"not_enough_rate": "You do not have enough rate to sell"
 		}
-	}
+	},
+	"share_symbol_key":"Please provide a unique symbol"
 }
