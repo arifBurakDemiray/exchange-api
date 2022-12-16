@@ -57,7 +57,7 @@ model Share {
   id          String        @id @default(uuid())
   symbol      String        @unique @db.VarChar(3)
   rate        Int
-  price       Float         @unique @db.Double
+  price       Float         @db.Double
   created_at  DateTime      @default(now())
   updated_at  DateTime      @updatedAt
   closed      Boolean       @default(false)
