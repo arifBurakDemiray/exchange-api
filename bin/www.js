@@ -6,7 +6,7 @@
 
 import app from '../app.js';
 import debug from "debug";
- debug.debug('todo-backend:server');
+ debug.debug('exchange-api:server');
  import http from "http";
 
 /**
