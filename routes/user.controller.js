@@ -4,8 +4,7 @@ import {router} from './router.js'
 
 /* GET todo listing. */
 router.patch('/deposit',authenticateToken, async function(req, res, next) {
-    const result = await userService.depositMoney(req)
-    res.status(result.status).json(result)
+    res.promise(userService.depositMoney(req))
 });
 
 export default router;
