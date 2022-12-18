@@ -41,7 +41,7 @@
         "not_found":"Sirket bulunamadi",
         "update_price_time": "Fiyati guncellemek icin son guncellemeden 1 saat beklemelisiniz",
         "not_authorized": "Baskalarinin hisselerini guncelleyemezsiniz",
-
+		"rate_limit": "Hisse degeri 100 den az olmali",
 		"self_buy": "Kendi hisselerinizle portfolyo olusturamazsiniz"
     },
 	"portfolio":{

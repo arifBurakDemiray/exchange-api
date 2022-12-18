@@ -43,7 +43,11 @@ export const shareService = {
     },
     async postShare(req){
         const userId = getUserId(req)
-        //add controls
+        const rate = parseInt(req.body.rate)
+
+        if(rate > 100){
+            Response().message(req.t("share.rate_limit")).status(HttpStatus.BAD_REQUEST).build()
+        }
 
         try{
             return Response().data(await orm.share.create({
@@ -51,7 +55,7 @@ export const shareService = {
                     symbol: req.body.symbol.toUpperCase(),
                     price: parseFloat(req.body.price),
                     user_id: userId,
-                    rate: parseInt(req.body.rate)
+                    rate: rate
                 }
         })).build()}
         catch(e){

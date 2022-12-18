@@ -41,7 +41,8 @@
 		"not_found":"Share is not found",
 		"update_price_time": "You should wait one hour to update price from last update",
 		"not_authorized": "You cannot update others share",
-		"self_buy": "You cannot create portfolio for your own shares"
+		"self_buy": "You cannot create portfolio for your own shares",
+		"rate_limit": "Please provide rate below 100"
 	},
 	"portfolio":{
 		"exists": "There is portfolio exists with that share",
