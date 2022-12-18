@@ -8,7 +8,7 @@
     "start": "node ./bin/www.js"
   },
   "engines": {
-    "node": "16.12.1"
+    "node": "16.18.1"
   },
   "dependencies": {
     "@prisma/client": "^4.6.1",
