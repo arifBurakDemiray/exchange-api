@@ -8,8 +8,9 @@ import dotenv from 'dotenv'
 import i18next from 'i18next'
 import i18nextMiddleware from 'i18next-http-middleware'
 import Backend from 'i18next-fs-backend'
-var app = express();
+import { promiseMiddleware } from './middleware/promise.middleware.js';
 
+var app = express();
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -37,20 +38,13 @@ i18next
 })
 
 app.use(i18nextMiddleware.handle(i18next))
+app.use(promiseMiddleware())
 
 subscribeEnpoints(app)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
-});
-
-// error handler
-app.use(function(err, req, res, next) {
-
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  res.status(err.status || 500).json({message:err.message});
 });
 
 export default app;
