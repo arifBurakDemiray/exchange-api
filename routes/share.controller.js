@@ -10,4 +10,8 @@ router.post('/share',authenticateToken, async function(req, res, next) {
     res.promise(shareService.postShare(req))
 });
 
+router.patch('/share',authenticateToken, async function(req, res, next) {
+    res.promise(shareService.updateShare(req))
+});
+
 export default router;
