@@ -7,12 +7,9 @@
   "scripts": {
     "start": "node ./bin/www.js"
   },
-<<<<<<< HEAD
   "engines": {
     "node": "16.18.1"
   },
-=======
->>>>>>> parent of 6ca2fd7 (feat: deployment purposes)
   "dependencies": {
     "@prisma/client": "^4.6.1",
     "bcrypt": "^5.1.0",
