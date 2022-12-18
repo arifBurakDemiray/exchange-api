@@ -35,7 +35,8 @@
 	"status":{
 		"unauthorized": "You are unauthorized to reach that context",
 		"forbidden": "You lack permissions to reach that context",
-		"unhandled": "Unhandled error occured, Please contact with us"
+		"unhandled": "Unhandled error occured, Please contact with us",
+		"not_found": "Content not found"
 	},
 	"share":{
 		"not_found":"Share is not found",

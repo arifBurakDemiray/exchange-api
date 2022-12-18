@@ -1,3 +1,4 @@
+import { NotFoundError } from "@prisma/client/runtime/index.js";
 import  jwt  from "jsonwebtoken";
 import { HttpStatus } from "../enums/status.enum.js";
 import { UnauthorizedError } from "../error/errors.js";
@@ -10,6 +11,11 @@ const handleError = (req,res, err = {}) => {
         .status(err.status || HttpStatus.UNAUTHORIZED)
         .send({message: req.t('status.unauthorized')})
     }
+    else if(err instanceof NotFoundError){
+      res
+      .status(err.status || HttpStatus.NOT_FOUND)
+      .send({message: req.t('status.not_found')})
+  }
     else if(err instanceof jwt.JsonWebTokenError){
         res
         .status(err.status || HttpStatus.ACCESS_DENIED)

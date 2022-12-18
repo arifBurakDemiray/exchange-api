@@ -35,7 +35,8 @@
     "status":{
 		"unauthorized": "Erismek icin yetkiniz yok",
 		"forbidden": "Erismek izin yeterli izniniz yok",
-		"unhandled": "Bilinmeyen hata, lutfen bizimle iletisime geciniz"
+		"unhandled": "Bilinmeyen hata, lutfen bizimle iletisime geciniz",
+        "not_found": "Icerik bulunamadi"
 	},
     "share":{
         "not_found":"Sirket bulunamadi",
