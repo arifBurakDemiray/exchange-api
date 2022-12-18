@@ -34,5 +34,10 @@
             "not_enough_rate": "Yeterli veriniz yok"
 		}
 	},
-	"share_symbol_key":"Benzersiz bir sembol tanimlayiniz"
+	"share_symbol_key":"Benzersiz bir sembol tanimlayiniz",
+    "status":{
+		"unauthorized": "Erismek icin yetkiniz yok",
+		"forbidden": "Erismek izin yeterli izniniz yok",
+		"unhandled": "Bilinmeyen hata, lutfen bizimle iletisime geciniz"
+	}
 }

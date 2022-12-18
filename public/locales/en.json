@@ -34,5 +34,10 @@
 			"not_enough_rate": "You do not have enough rate to sell"
 		}
 	},
-	"share_symbol_key":"Please provide a unique symbol"
+	"share_symbol_key":"Please provide a unique symbol",
+	"status":{
+		"unauthorized": "You are unauthorized to reach that context",
+		"forbidden": "You lack permissions to reach that context",
+		"unhandled": "Unhandled error occured, Please contact with us"
+	}
 }
