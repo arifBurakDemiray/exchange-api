@@ -15,9 +15,6 @@
             "warning": "You have 1 hour to confirm your account"
         }
     },
-    "todo": {
-		"not_permissible":"Bu koleksiyonu görebilmek için yeterli izinleriniz yok"
-	},
     "login_failed": "Kullanici adi veya sifre yanlis",
     "login_recently": "Yakin zamanda giris yaptiniz lutfen bekleyiniz",
     "register_new": "Lutfen hesabinizi aktive ediniz",
@@ -39,5 +36,17 @@
 		"unauthorized": "Erismek icin yetkiniz yok",
 		"forbidden": "Erismek izin yeterli izniniz yok",
 		"unhandled": "Bilinmeyen hata, lutfen bizimle iletisime geciniz"
+	},
+    "share":{
+        "not_found":"Sirket bulunamadi",
+        "update_price_time": "Fiyati guncellemek icin son guncellemeden 1 saat beklemelisiniz",
+        "not_authorized": "Baskalarinin hisselerini guncelleyemezsiniz",
+
+		"self_buy": "Kendi hisselerinizle portfolyo olusturamazsiniz"
+    },
+	"portfolio":{
+		"exists": "Verilen hisseye ait portfolyo mevcut",
+        "not_found": "Portfolyo bulunamadi",
+		"sell_asset": "Portfolto silmeden once bagli varligi satiniz"
 	}
 }

@@ -15,9 +15,6 @@
 			"warning": "You have 1 hour to confirm your account"
 		}
 	},
-	"todo": {
-		"not_permissible":"You lack permissions to see this collection"
-	},
 	"login_failed": "Username or password is wrong",
 	"login_recently": "You logged in recently",
 	"register_new": "Please confirm your account",
@@ -39,5 +36,16 @@
 		"unauthorized": "You are unauthorized to reach that context",
 		"forbidden": "You lack permissions to reach that context",
 		"unhandled": "Unhandled error occured, Please contact with us"
+	},
+	"share":{
+		"not_found":"Share is not found",
+		"update_price_time": "You should wait one hour to update price from last update",
+		"not_authorized": "You cannot update others share",
+		"self_buy": "You cannot create portfolio for your own shares"
+	},
+	"portfolio":{
+		"exists": "There is portfolio exists with that share",
+		"not_found": "Given portfolio not found",
+		"sell_asset": "Please sell your related asset before portfolio deletion"
 	}
 }
